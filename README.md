@@ -1,5 +1,39 @@
 # Collaborative Filtering
 
+### Introduction
+
+Like a friend who shares your tastes and offers suggestions based on books, clothes, and brands they love, recommender systems, backed by machine learning, aim to do the same. However, in order to effectively recommend products you might like, the system must understand who you are.
+
+Access to data can be a make-or-break element of the effectiveness of a sophisticated product recommendation engine. While user data is not necessary for every strategy, those designed to market products to users based on their individual preferences and behaviors can only be deployed once a system gets to know you on a more personal level.
+
+To get a better grasp on how these systems are able to pull this off, let’s dive into collaborative filtering and how marketers can use it for their own eCommerce sites.
+
+#### What is collaborative filtering?
+
+A popular approach to product recommendations, collaborative filtering is a type of personalized recommendation strategy that identifies the similarities between users (based on site interactions) to serve relevant product recommendations across digital properties. Recommender systems collect user information, mining this data to inform which items to display. The data includes, but is not limited to:
+
+Which products a user has viewed?
+Which products a user has clicked on?
+Which products a user has searched for?
+Which products a user has added to their cart?
+Which products a user has purchased before?
+
+Analyzing these massive datasets based on a site visitor’s behavior and activity, the system analyzes product attributes listed in data feeds to begin crafting predictions, serving product recommendations across any page of a site to drive a customer closer to a purchase. To effectively do so, the system taps two different types of data:
+
+Explicit data: Data a user actively provides, such as answers to a questionnaire or survey
+Implicit data: Data inferred by a system based on a user’s behavior, such as a preference for sneakers after viewing several pairs and purchasing two pairs in the last six months
+
+To understand how similarities are measured based on all available data, let’s dive into the neighborhood approach.
+
+#### The neighborhood approach
+
+One of the many processes for collaborative filtering, the neighborhood approach produces product recommendations, making predictions based both on products users have previously engaged with and shared affinities between users. The system identifies users with similar behaviors, tracking their interactions, purchases, add-to-carts, and more to recommend products a user is likely interested in.
+
+Let’s say User D is browsing through the “Coats and Jackets” category of a site, and the system has identified that they share interests and behavioral patterns with User A, User B, and User C. With collaborative filtering, the engine will likely recommend a denim jacket because similar users have shown interest in this item.
+
+
+To build a movie recommendation system, I am going to use MovieLens datasets. Let's get start.
+
 ### Setup
 
 Let's setup Spark on Colab environment.  Run the cell below!
@@ -91,29 +125,17 @@ We can easily check the current version and get the link of the web interface. I
 spark
 ```
 
-
-
-
-
-    <div>
-        <p><b>SparkSession - in-memory</b></p>
-
-<div>
-    <p><b>SparkContext</b></p>
-
-    <p><a href="http://805b744e894f:4050">Spark UI</a></p>
-
-    <dl>
-      <dt>Version</dt>
-        <dd><code>v3.1.2</code></dd>
-      <dt>Master</dt>
-        <dd><code>local[*]</code></dd>
-      <dt>AppName</dt>
-        <dd><code>pyspark-shell</code></dd>
-    </dl>
-</div>
-
-    </div>
+```python
+SparkSession - in-memory
+SparkContext
+Spark UI
+Version
+v3.1.2
+Master
+local[*]
+AppName
+pyspark-shell
+```
 
 
 
